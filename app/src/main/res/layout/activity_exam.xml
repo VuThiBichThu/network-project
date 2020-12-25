@@ -1,0 +1,171 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_timer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#78C0E0"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name_exam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="Multiple choice questions"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="24dp"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/submit_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+
+                    android:src="@mipmap/submit"></ImageButton>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+
+                    android:src="@mipmap/submit_text"></ImageButton>
+
+            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/submit_button"-->
+<!--                    android:layout_width="94dp"-->
+<!--                    android:layout_height="79dp"-->
+<!--                    android:layout_marginLeft="55dp"-->
+<!--                    android:background="@null"-->
+<!--                    android:scaleType="fitCenter"-->
+
+<!--                    android:src="@mipmap/submit"></ImageButton>-->
+<!--                <ImageButton-->
+<!--                    android:layout_width="94dp"-->
+<!--                    android:layout_height="79dp"-->
+<!--                    android:layout_marginLeft="55dp"-->
+<!--                    android:background="@null"-->
+<!--                    android:scaleType="fitCenter"-->
+
+<!--                    android:src="@mipmap/submit_text"></ImageButton>-->
+
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_exam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="7dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/name_finish_exam"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:text="Multiple choice questions"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="24dp"></TextView>-->
+
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/bottomBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:background="@android:color/black"-->
+<!--            android:orientation="vertical"-->
+
+<!--            />-->
+<!--        <Button-->
+<!--            android:id="@+id/submit_button"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_width="400dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:text="Submit" />-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/submit_button"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="79dp"-->
+
+<!--                android:background="@null"-->
+<!--                android:scaleType="fitCenter"-->
+
+<!--                android:src="@mipmap/submit"></ImageButton>-->
+<!--            <ImageButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="79dp"-->
+
+<!--                android:background="@null"-->
+<!--                android:scaleType="fitCenter"-->
+
+<!--                android:src="@mipmap/submit_text"></ImageButton>-->
+
+<!--        </LinearLayout>-->
+    </LinearLayout>
+</LinearLayout>
