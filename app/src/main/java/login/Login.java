@@ -46,7 +46,7 @@ public class Login extends Fragment {
         id = v.findViewById(R.id.id);
         password = v.findViewById(R.id.password);
         login_button = v.findViewById(R.id.login_button);
-        notify = v.findViewById(R.id.notifi);
+        notify = v.findViewById(R.id.notify);
         register = v.findViewById(R.id.register);
         try {
             socket = SocketUtil.getConnection();
@@ -62,7 +62,7 @@ public class Login extends Fragment {
                 String strEmail = id.getText().toString();
                 String strPass = password.getText().toString();
                 JSONObject account = new JSONObject();
-                if (strEmail != null && strPass != null) {
+                if (!strEmail.isEmpty() && !strPass.isEmpty()) {
                     try {
                         loginAccount = new LoginAccount(strEmail, strPass);
                         account.put("id", strEmail);
@@ -86,12 +86,12 @@ public class Login extends Fragment {
                                         student = gson.fromJson(status.getJSONObject("student").toString(), Student.class);
                                         if (isValid) {
                                             notify.setVisibility(View.INVISIBLE);
-                                            Toast.makeText(getContext(), "Đăng nhập thành công", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getContext(), "Login successfully!", Toast.LENGTH_LONG).show();
                                             Intent intent = new Intent(view.getContext(), MainActivity.class);
                                             intent.putExtra("student", student);
                                             view.getContext().startActivity(intent);
                                         } else {
-                                            Toast.makeText(getContext(), "Đăng nhập không thành công", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getContext(), "Login failed!", Toast.LENGTH_LONG).show();
                                             notify.setVisibility(View.VISIBLE);
                                         }
                                     } catch (JSONException e) {
@@ -101,6 +101,10 @@ public class Login extends Fragment {
                             });
                         }
                     });
+                }
+                else {
+                    notify.setText("Please input your account information!");
+                    notify.setVisibility(View.VISIBLE);
                 }
             }
         });

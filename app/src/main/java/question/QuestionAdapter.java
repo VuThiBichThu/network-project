@@ -64,7 +64,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
         for (int i = 0; i < radioButtons.size(); i++) {
             radioButtons.get(i).setText(answer.get(i));
         }
-        holder.ques_content.setText("Câu " + (position + 1) + ": " + question.getQuestion());
+        holder.ques_content.setText("Question " + (position + 1) + ": " + question.getQuestion());
 
         holder.group_button_answ.setTag(position);
         holder.group_button_answ.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

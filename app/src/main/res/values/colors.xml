@@ -4,8 +4,8 @@
     <color name="white">#fff</color>
     <color name="colorPrimary">#2424D3</color>
     <color name="colorPrimaryDark">#333</color>
-    <color name="login_button_color">#1A786F</color>
-    <color name="colorAccent">#03dac5</color>
+    <color name="login_button_color">#0C99DA</color>
+    <color name="colorAccent">#0384DA</color>
     <color name="red">#DA0323</color>
     <color name="toolbarTextColor">#E6D4D4</color>
     <color name="greycolor">#B5B6B6</color>

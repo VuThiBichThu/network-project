@@ -108,7 +108,7 @@ public class Exam extends AppCompatActivity implements QuestionAdapter.OnItemCli
         });
         selectedAnswers = new LinkedHashMap<>();
         for (int i = 0; i < questions.size(); i++) {
-            Log.d("Cau", "i: " + questions.get(i));
+            Log.d("Question", "i: " + questions.get(i));
             selectedAnswers.put(i, 0);
         }
         submit_button.setOnClickListener(new View.OnClickListener() {
@@ -163,7 +163,7 @@ public class Exam extends AppCompatActivity implements QuestionAdapter.OnItemCli
 
         Log.d("So cau tra loi dung", String.valueOf(correct_ques));
 
-        float score = (float) correct_ques * 10.0f;
+        int score =  correct_ques * 10;
 
         Intent intent = new Intent(getApplicationContext(), FinishExam.class);
         intent.putExtra("score", score);

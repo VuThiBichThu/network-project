@@ -28,7 +28,7 @@ import login.Login;
 import utils.SocketUtil;
 
 public class Register extends Fragment {
-    TextView id, name, grade, pass, confirm_pass, notifi, loginLink;
+    TextView id, name, grade, pass, confirm_pass, notify, loginLink;
     Button register_button;
     ImageButton show_pass;
     Socket socket;
@@ -39,13 +39,13 @@ public class Register extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_register1, container, false);
+        View v = inflater.inflate(R.layout.fragment_register, container, false);
         id = v.findViewById(R.id.id);
         name = v.findViewById(R.id.name);
         grade = v.findViewById(R.id.grade);
         pass = v.findViewById(R.id.password);
         confirm_pass = v.findViewById(R.id.password_confirm);
-        notifi = v.findViewById(R.id.notifi);
+        notify = v.findViewById(R.id.notify);
         loginLink = v.findViewById(R.id.login_link);
         register_button = v.findViewById(R.id.register_button);
 
@@ -83,8 +83,8 @@ public class Register extends Fragment {
                                         try {
                                             Boolean isExistedAcc = json.getBoolean("isExisted");
                                             if (isExistedAcc) {
-                                                notifi.setText("Id tài khoản đã tồn tại!");
-                                                notifi.setVisibility(View.VISIBLE);
+                                                notify.setText("Register successfully!");
+                                                notify.setVisibility(View.VISIBLE);
                                             } else {
                                                 //  Student student = new Student(idString, nameString, gradeString, 0f, passString);
                                                 JSONObject jsonStd = new JSONObject();
@@ -94,8 +94,8 @@ public class Register extends Fragment {
                                                 jsonStd.put("score", 0f);
                                                 jsonStd.put("pass", passString);
                                                 socket.emit("accountReg", jsonStd);
-                                                notifi.setText("Đăng ký thành công!");
-                                                notifi.setVisibility(View.VISIBLE);
+                                                notify.setText("Đăng ký thành công!");
+                                                notify.setVisibility(View.VISIBLE);
                                                 register_button.setEnabled(false);
                                                 socket.disconnect();
                                                 socket.close();
@@ -107,12 +107,12 @@ public class Register extends Fragment {
                             }
                         });
                     } else {
-                        notifi.setText("Xác nhận mật khẩu không đúng!");
-                        notifi.setVisibility(View.VISIBLE);
+                        notify.setText("Xác nhận mật khẩu không đúng!");
+                        notify.setVisibility(View.VISIBLE);
                     }
                 } else {
-                    notifi.setText("Hãy điền đủ thông tin!");
-                    notifi.setVisibility(View.VISIBLE);
+                    notify.setText("Please input your information!");
+                    notify.setVisibility(View.VISIBLE);
                 }
             }
         });

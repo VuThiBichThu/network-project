@@ -39,12 +39,12 @@ public class FinishExam extends AppCompatActivity {
 
         finishExamBtn = findViewById(R.id.finish_exam_btn);
         scoreTv = findViewById(R.id.score);
-        float score = getIntent().getFloatExtra("score", 0);
+        int score = getIntent().getIntExtra("score", 0);
         int num_correct = getIntent().getIntExtra("num_correct", 0);
         int num_ques = getIntent().getIntExtra("num_ques", 0);
         id_list_ques = getIntent().getStringExtra("id_list_ques");
         Log.d("So cau dung", String.valueOf(num_correct));
-        rsTxt = num_correct + "/" + num_ques;
+        rsTxt = num_correct + "/" + num_ques+" questions";
         resultTxt.setText(rsTxt);
         scoreTv.setText(String.valueOf(score) + "");
 

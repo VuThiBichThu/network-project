@@ -9,7 +9,7 @@ import io.socket.client.Socket;
 public class SocketUtil {
     public static Socket getConnection() throws URISyntaxException {
         Socket socket;
-        socket = IO.socket("http://192.168.137.8:7777/");
+        socket = IO.socket("http://192.168.43.79:7777/");
         return socket;
     }
 }
